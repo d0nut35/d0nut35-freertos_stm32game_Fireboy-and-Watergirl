@@ -1,0 +1,15 @@
+fire_ice1\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
+fire_ice1\event_groups.o: D:\programfile\MDK\Core\ARM\ARMCC\Bin\..\include\stdlib.h
+fire_ice1\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+fire_ice1\event_groups.o: D:\programfile\MDK\Core\ARM\ARMCC\Bin\..\include\stddef.h
+fire_ice1\event_groups.o: D:\programfile\MDK\Core\ARM\ARMCC\Bin\..\include\stdint.h
+fire_ice1\event_groups.o: ../Core/Inc/FreeRTOSConfig.h
+fire_ice1\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+fire_ice1\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+fire_ice1\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+fire_ice1\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+fire_ice1\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+fire_ice1\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+fire_ice1\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+fire_ice1\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+fire_ice1\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
