@@ -35,6 +35,8 @@ fire_ice1\driver_timer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_
 fire_ice1\driver_timer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 fire_ice1\driver_timer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 fire_ice1\driver_timer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+fire_ice1\driver_timer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+fire_ice1\driver_timer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 fire_ice1\driver_timer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 fire_ice1\driver_timer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 fire_ice1\driver_timer.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
@@ -55,6 +57,8 @@ fire_ice1\driver_timer.o: ../Core/Inc/spi.h
 fire_ice1\driver_timer.o: ../Core/Inc/gpio.h
 fire_ice1\driver_timer.o: ../Core/Inc/dma.h
 fire_ice1\driver_timer.o: ../Core/Inc/adc.h
+fire_ice1\driver_timer.o: ../Core/Inc/tim.h
+fire_ice1\driver_timer.o: ../Core/Inc/i2c.h
 fire_ice1\driver_timer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 fire_ice1\driver_timer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 fire_ice1\driver_timer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
@@ -63,4 +67,6 @@ fire_ice1\driver_timer.o: ./BSP/LCD/gui.h
 fire_ice1\driver_timer.o: ./BSP/bsp_system.h
 fire_ice1\driver_timer.o: ./BSP/LCD/lcd.h
 fire_ice1\driver_timer.o: BSP\driver_key.h
+fire_ice1\driver_timer.o: BSP\driver_mpu6050.h
+fire_ice1\driver_timer.o: BSP\driver_rotary_encoder.h
 fire_ice1\driver_timer.o: ./Myapp/game1.h

@@ -65,7 +65,7 @@ void mdelay(int ms);
  * 2023/08/03	     V1.0	  韦东山	      创建
  ***********************************************************************/
 uint64_t system_get_ns(void);
-
+uint64_t system_get_us(void);
 
 #endif /* _DRIVER_TIMER_H */
 

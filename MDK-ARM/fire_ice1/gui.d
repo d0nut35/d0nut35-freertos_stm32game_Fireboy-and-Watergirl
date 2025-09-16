@@ -5,6 +5,7 @@ fire_ice1\gui.o: D:\programfile\MDK\Core\ARM\ARMCC\Bin\..\include\stdio.h
 fire_ice1\gui.o: D:\programfile\MDK\Core\ARM\ARMCC\Bin\..\include\string.h
 fire_ice1\gui.o: D:\programfile\MDK\Core\ARM\ARMCC\Bin\..\include\stdlib.h
 fire_ice1\gui.o: D:\programfile\MDK\Core\ARM\ARMCC\Bin\..\include\math.h
+fire_ice1\gui.o: D:\programfile\MDK\Core\ARM\ARMCC\Bin\..\include\stdint.h
 fire_ice1\gui.o: ../Core/Inc/main.h
 fire_ice1\gui.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 fire_ice1\gui.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -13,7 +14,6 @@ fire_ice1\gui.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 fire_ice1\gui.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 fire_ice1\gui.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 fire_ice1\gui.o: ../Drivers/CMSIS/Include/core_cm4.h
-fire_ice1\gui.o: D:\programfile\MDK\Core\ARM\ARMCC\Bin\..\include\stdint.h
 fire_ice1\gui.o: ../Drivers/CMSIS/Include/cmsis_version.h
 fire_ice1\gui.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 fire_ice1\gui.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -35,6 +35,8 @@ fire_ice1\gui.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
 fire_ice1\gui.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 fire_ice1\gui.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 fire_ice1\gui.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+fire_ice1\gui.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+fire_ice1\gui.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 fire_ice1\gui.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 fire_ice1\gui.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 fire_ice1\gui.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
@@ -55,6 +57,8 @@ fire_ice1\gui.o: ../Core/Inc/spi.h
 fire_ice1\gui.o: ../Core/Inc/gpio.h
 fire_ice1\gui.o: ../Core/Inc/dma.h
 fire_ice1\gui.o: ../Core/Inc/adc.h
+fire_ice1\gui.o: ../Core/Inc/tim.h
+fire_ice1\gui.o: ../Core/Inc/i2c.h
 fire_ice1\gui.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 fire_ice1\gui.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 fire_ice1\gui.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
@@ -64,5 +68,7 @@ fire_ice1\gui.o: ./BSP/LCD/gui.h
 fire_ice1\gui.o: ./BSP/bsp_system.h
 fire_ice1\gui.o: ./BSP/LCD/lcd.h
 fire_ice1\gui.o: ./BSP/driver_key.h
+fire_ice1\gui.o: ./BSP/driver_mpu6050.h
+fire_ice1\gui.o: ./BSP/driver_rotary_encoder.h
 fire_ice1\gui.o: ./Myapp/game1.h
 fire_ice1\gui.o: BSP\LCD\font.h

@@ -21,6 +21,7 @@
 #include "cmsis_os.h"
 #include "adc.h"
 #include "dma.h"
+#include "i2c.h"
 #include "spi.h"
 #include "tim.h"
 #include "gpio.h"
@@ -28,7 +29,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "bsp_system.h"
-#include "pic.h"
+
 //#include "FONT.h"
 /* USER CODE END Includes */
 
@@ -98,6 +99,7 @@ int main(void)
   MX_SPI1_Init();
   MX_TIM4_Init();
   MX_ADC1_Init();
+  MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 	
   /* USER CODE END 2 */

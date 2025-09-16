@@ -29,6 +29,8 @@ fire_ice1\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
 fire_ice1\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 fire_ice1\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 fire_ice1\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+fire_ice1\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+fire_ice1\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 fire_ice1\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 fire_ice1\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 fire_ice1\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
@@ -47,6 +49,7 @@ fire_ice1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 fire_ice1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 fire_ice1\main.o: ../Core/Inc/adc.h
 fire_ice1\main.o: ../Core/Inc/dma.h
+fire_ice1\main.o: ../Core/Inc/i2c.h
 fire_ice1\main.o: ../Core/Inc/spi.h
 fire_ice1\main.o: ../Core/Inc/tim.h
 fire_ice1\main.o: ../Core/Inc/gpio.h
@@ -64,5 +67,6 @@ fire_ice1\main.o: ./BSP/LCD/gui.h
 fire_ice1\main.o: ./BSP/bsp_system.h
 fire_ice1\main.o: ./BSP/LCD/lcd.h
 fire_ice1\main.o: ./BSP/driver_key.h
+fire_ice1\main.o: ./BSP/driver_mpu6050.h
+fire_ice1\main.o: ./BSP/driver_rotary_encoder.h
 fire_ice1\main.o: ./Myapp/game1.h
-fire_ice1\main.o: ./BSP/LCD/pic.h

@@ -513,7 +513,7 @@ void LCD_Show2Num(uint16_t x,uint16_t y,int16_t num,uint8_t len,uint8_t size)
 		LCD_ShowChar(x-10,y,POINT_COLOR,BACK_COLOR,'-',size,0); 	
 		num=-num;
 	}
-	if(num>0)
+	else if(num>0)
 	{
 		LCD_ShowChar(x-10,y,POINT_COLOR,BACK_COLOR,'+',size,0); 	
 		

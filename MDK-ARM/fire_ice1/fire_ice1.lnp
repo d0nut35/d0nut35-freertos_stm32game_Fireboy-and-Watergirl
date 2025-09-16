@@ -5,6 +5,7 @@
 "fire_ice1\freertos.o"
 "fire_ice1\adc.o"
 "fire_ice1\dma.o"
+"fire_ice1\i2c.o"
 "fire_ice1\spi.o"
 "fire_ice1\tim.o"
 "fire_ice1\stm32f4xx_it.o"
@@ -28,6 +29,8 @@
 "fire_ice1\stm32f4xx_hal_cortex.o"
 "fire_ice1\stm32f4xx_hal.o"
 "fire_ice1\stm32f4xx_hal_exti.o"
+"fire_ice1\stm32f4xx_hal_i2c.o"
+"fire_ice1\stm32f4xx_hal_i2c_ex.o"
 "fire_ice1\stm32f4xx_hal_spi.o"
 "fire_ice1\system_stm32f4xx.o"
 "fire_ice1\croutine.o"
@@ -44,7 +47,11 @@
 "fire_ice1\gui.o"
 "fire_ice1\lcd.o"
 "fire_ice1\driver_key.o"
+"fire_ice1\driver_rotary_encoder.o"
+"fire_ice1\driver_mpu6050.o"
+"fire_ice1\driver_irq.o"
 "fire_ice1\game1.o"
+"fire_ice1\menu.o"
 --library_type=microlib --strict --scatter "fire_ice1\fire_ice1.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

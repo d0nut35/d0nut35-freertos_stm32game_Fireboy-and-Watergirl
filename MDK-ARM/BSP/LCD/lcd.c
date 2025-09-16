@@ -64,16 +64,27 @@ _lcd_dev lcddev;
 
 //������ɫ,������ɫ
 uint16_t POINT_COLOR = RED,BACK_COLOR = 0xFFFF;  
-uint16_t DeviceCode;	 
+uint16_t DeviceCode;
+volatile uint8_t spi_tx_complete = 0;
+uint8_t spi_buffer[1];
 
 /*SPIд����*/
 uint8_t SPI_WriteByte(SPI_HandleTypeDef *hspi, const uint8_t *pData, uint16_t Size)
 {
-	
-	return HAL_SPI_Transmit(hspi,pData,Size,HAL_MAX_DELAY);//HAL_SPI_Transmit_DMA(hspi,pData,Size);//HAL_SPI_Transmit(hspi,pData,Size,HAL_MAX_DELAY);//HAL_SPI_Transmit_DMA(hspi,pData,Size);//HAL_SPI_Transmit(hspi,pData,Size,HAL_MAX_DELAY);
+//	spi_buffer[0]=pData[0];	
+//	HAL_SPI_Transmit_DMA(hspi,spi_buffer,Size);
+//	while (!spi_tx_complete){};  // 等待传输完成
+//    spi_tx_complete = 0;
+	return HAL_SPI_Transmit(hspi,pData,Size,HAL_MAX_DELAY);//HAL_SPI_Transmit_DMA(hspi,pData,Size);//HAL_SPI_Transmit(hspi,pData,Size,HAL_MAX_DELAY);
 }
 
-
+void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi) 
+{
+    if (hspi == &hspi1) {
+        // 传输完成后的操作，例如拉高 CS 信号
+		spi_tx_complete=1;
+    }
+}
 
 
 

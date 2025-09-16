@@ -146,6 +146,25 @@ uint64_t system_get_ns(void)
     return ns;
 }
 
+uint64_t system_get_us(void)
+{
+    //extern uint32_t HAL_GetTick(void);
+    extern TIM_HandleTypeDef        htim14;
+    TIM_HandleTypeDef *hHalTim = &htim14;
+    
+    uint64_t ns = HAL_GetTick();
+    uint64_t cnt;
+    uint64_t reload;
+
+    cnt = __HAL_TIM_GET_COUNTER(hHalTim);
+    reload = __HAL_TIM_GET_AUTORELOAD(hHalTim);
+
+    ns *= 1000;
+    ns += cnt * 1000 / reload;
+    return ns;
+}
+
+
 /* 返回系统启动后过了多少时间(单位us) */
 unsigned long getRunTimeCounterValue(void)
 {

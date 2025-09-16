@@ -22,17 +22,21 @@ Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 D:\programfile\project\fire_ice1\MDK-ARM\fire_ice1.uvprojx
-Project File Date:  09/15/2025
+Project File Date:  09/17/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\programfile\MDK\Core\ARM\ARMCC\Bin'
 Build target 'fire_ice1'
-compiling driver_key.c...
-compiling freertos.c...
+compiling game1.c...
+Myapp\game1.c(22): warning:  #550-D: variable "g_xQueueCharacter"  was set but never used
+  static QueueHandle_t g_xQueueCharacter; /* ╫ги╚╤сап */
+Myapp\game1.c(144): warning:  #177-D: function "test"  was declared but never referenced
+  static void test(void)
+Myapp\game1.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=20260 RO-data=504 RW-data=156 ZI-data=20196  
+Program Size: Code=30280 RO-data=588 RW-data=220 ZI-data=20548  
 FromELF: creating hex file...
-"fire_ice1\fire_ice1.axf" - 0 Error(s), 0 Warning(s).
+"fire_ice1\fire_ice1.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -55,7 +59,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.6.0
       Include file:  CMSIS/Core/Include/tz_context.h
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

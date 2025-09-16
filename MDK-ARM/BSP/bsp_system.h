@@ -5,6 +5,7 @@
 #include "string.h"
 #include "stdlib.h"
 #include "math.h"
+#include "stdint.h"
 
 #include "main.h"
 #include "cmsis_os.h"
@@ -12,6 +13,8 @@
 #include "gpio.h"
 #include "dma.h"
 #include "adc.h"
+#include "tim.h"
+#include "i2c.h"
 
 #include "FreeRTOS.h"
 #include "task.h"
@@ -24,7 +27,8 @@
 #include "gui.h" 
 #include "lcd.h"
 #include "driver_key.h"
-
+#include "driver_mpu6050.h"
+#include "driver_rotary_encoder.h"
 
 
 

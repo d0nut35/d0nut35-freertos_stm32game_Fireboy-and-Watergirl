@@ -45,6 +45,9 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
+static SemaphoreHandle_t g_xI2CMutex; 
+
+
 
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
@@ -57,6 +60,20 @@ const osThreadAttr_t defaultTask_attributes = {
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
+void GetI2C(void)
+{
+	xSemaphoreTake(g_xI2CMutex,portMAX_DELAY);
+
+}
+
+void PutI2C(void)
+{
+	xSemaphoreGive(g_xI2CMutex);
+
+}
+
+
+
 
 /* USER CODE END FunctionPrototypes */
 
@@ -71,9 +88,14 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
   */
 void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
-	LCD_Init();
+	g_xI2CMutex = xSemaphoreCreateMutex();//i2c����������
 	
-	ADC_Start();
+	LCD_Init();
+	  
+	ADC_Start();//��ʼ����ҡ������
+	RotaryEncoder_Init();//��ת��������ʼ��
+	MPU6050_Init();
+	
   /* USER CODE END Init */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -99,6 +121,7 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+  xTaskCreate(game1_task, "GameTask", 128, NULL, osPriorityNormal, NULL);
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
@@ -120,21 +143,6 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
-//	  Joystick_Data buffer;
-//	  QueueHandle_t g_xQueneJoystick;
-//	  g_xQueneJoystick =GetQueueJoystick();
-	  while(1)
-	  {
-//		  xQueueReceive(g_xQueneJoystick,&buffer,0);
-//		  sprintf(test,"-");
-//		  LCD_Show2Num(30,30,Js_data.js1_x,10,20);
-//		  LCD_ShowString(30,30,20,(uint8_t*)test,1);
-//		  LCD_ShowNum(30,30,buffer.js1_x,10,20);
-//		  LCD_ShowNum(30,70,Js_data.js1_y,10,20);
-//		  LCD_ShowNum(30,110,ADC1_sampling.adc1_average_A2,10,20);
-//		  LCD_ShowNum(30,150,ADC1_sampling.adc1_average_A1,10,20);
-	  }
-    //osDelay(1);
   }
   /* USER CODE END StartDefaultTask */
 }

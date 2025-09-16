@@ -26,6 +26,7 @@ typedef struct{
 	uint32_t time;
 }ADC1_SAMPLING;
 
+/*Ò¡¸Ë 1-FIRE 2-ICE*/
 typedef struct{
 	int8_t js1_x;
 	int8_t js1_y;
@@ -33,6 +34,7 @@ typedef struct{
 	int8_t js2_y;
 
 }Joystick_Data;
+
 
 
 extern ADC1_SAMPLING ADC1_sampling;
