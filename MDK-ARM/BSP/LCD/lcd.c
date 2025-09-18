@@ -63,7 +63,7 @@
 _lcd_dev lcddev;
 
 //������ɫ,������ɫ
-uint16_t POINT_COLOR = RED,BACK_COLOR = 0xFFFF;  
+uint16_t POINT_COLOR = 0XEF5B,BACK_COLOR = 0xFFFF;  
 uint16_t DeviceCode;
 volatile uint8_t spi_tx_complete = 0;
 uint8_t spi_buffer[1];

@@ -42,7 +42,7 @@
 struct mpu6050_data {
 	int32_t angle_x;
 	int32_t angle_y;
-	int32_t angle_z;
+	//int32_t angle_z;
 };
 
 /**********************************************************************

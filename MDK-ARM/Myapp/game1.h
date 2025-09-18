@@ -9,7 +9,9 @@
 #include "semphr.h"                     // ARM.FreeRTOS::RTOS:Core
 #include "queue.h"
 
-
+extern uint8_t duilie_flag;
+extern uint8_t g_level;
+extern uint8_t debug11;
 
 void game1_task(void *params);
 

@@ -258,7 +258,8 @@ void MPU6050_ParseData(int16_t AccX, int16_t AccY, int16_t AccZ, int16_t GyroX, 
 	if (result)
 	{
 		result->angle_x = (int32_t)(acos((double)((double)(AccX + MPU6050_X_ACCEL_OFFSET) / 16384.0)) * 57.29577);
-		result->angle_y = (int32_t)acos((double)((double)(AccY + MPU6050_Y_ACCEL_OFFSET) / 16384.0)) * 57.29577;
+		result->angle_y = (int32_t)acos((double)((double)(AccY + MPU6050_Y_ACCEL_OFFSET) / 1000)) * 90;
+		//result->angle_z = (int32_t)atan2(AccZ, AccX) * 180 / 3.14;//(int32_t)acos((double)((double)(AccZ + MPU6050_Z_ACCEL_OFFSET) / 16384.0)) * 57.29577;
 	}
 }
 
@@ -328,6 +329,8 @@ void MPU6050_Test(void)
 void MPU6050_Task(void *params)
 {	
     int16_t AccX;
+	int16_t AccY;
+	int16_t AccZ;
 	struct mpu6050_data result;
 	int ret;
 	//extern volatile int bInUsed;
@@ -340,24 +343,34 @@ void MPU6050_Task(void *params)
 		//len = LCD_PrintString(0, 6, "AngleX: ");
 		
 		/* 等待事件:bit0 */
-		xEventGroupWaitBits(g_xEventMPU6050, (1<<0), pdTRUE, pdFALSE, portMAX_DELAY);		
+		//xEventGroupWaitBits(g_xEventMPU6050, (1<<0), pdTRUE, pdFALSE, portMAX_DELAY);		
 		
 		/* 读数据 */
 		//while (bInUsed);
 		//bInUsed = 1;
 		GetI2C();
-		ret = MPU6050_ReadData(&AccX, NULL, NULL, NULL, NULL, NULL);
+		ret = MPU6050_ReadData(&AccX, &AccY, &AccZ, NULL, NULL, NULL);
 		PutI2C();
 		//bInUsed = 0;
 		
         if (0 == ret)
 		{
 			/* 解析数据 */
-			MPU6050_ParseData(AccX, 0, 0, 0, 0, 0, &result);
+			MPU6050_ParseData(AccX, AccY, AccZ, 0, 0, 0, &result);
 
 			/* 写队列 */
+
+//			debug11++;
+//			if(debug11>200)
+//			{
+//				debug11=0;
+//			}
+			
 			xQueueSend(g_xQueueMPU6050, &result, 0);
-			//LCD_ShowNum(30,110,result.angle_x,10,20);
+
+//			LCD_ShowNum(30,50,result.angle_x,10,20);
+//			LCD_Show2Num(30,100,result.angle_y,10,20);
+			//LCD_ShowNum(30,200,result.angle_z,10,20);
 			//len = LCD_PrintString(0, 6, "AngleX: ");
 			
 				

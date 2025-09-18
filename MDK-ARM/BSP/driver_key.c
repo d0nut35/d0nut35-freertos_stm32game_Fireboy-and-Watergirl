@@ -85,8 +85,10 @@ void Joystick_Analysis(void)
 		}
 		
 		//–¥∂”¡–
+		if(duilie_flag)
+		{
 		xQueueSendFromISR(g_xQueneJoystick,&Js_data,NULL);
-		
+		}
 		
 }
 
