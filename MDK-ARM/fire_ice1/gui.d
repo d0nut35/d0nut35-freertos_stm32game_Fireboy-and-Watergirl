@@ -71,4 +71,6 @@ fire_ice1\gui.o: ./BSP/driver_key.h
 fire_ice1\gui.o: ./BSP/driver_mpu6050.h
 fire_ice1\gui.o: ./BSP/driver_rotary_encoder.h
 fire_ice1\gui.o: ./Myapp/game1.h
+fire_ice1\gui.o: ./Myapp/menu.h
+fire_ice1\gui.o: ./Myapp/Music.h
 fire_ice1\gui.o: BSP\LCD\font.h

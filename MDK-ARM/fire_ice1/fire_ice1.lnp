@@ -52,6 +52,7 @@
 "fire_ice1\driver_irq.o"
 "fire_ice1\game1.o"
 "fire_ice1\menu.o"
+"fire_ice1\music.o"
 --library_type=microlib --strict --scatter "fire_ice1\fire_ice1.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -70,3 +70,5 @@ fire_ice1\driver_irq.o: BSP\driver_key.h
 fire_ice1\driver_irq.o: BSP\driver_mpu6050.h
 fire_ice1\driver_irq.o: BSP\driver_rotary_encoder.h
 fire_ice1\driver_irq.o: ./Myapp/game1.h
+fire_ice1\driver_irq.o: ./Myapp/menu.h
+fire_ice1\driver_irq.o: ./Myapp/Music.h

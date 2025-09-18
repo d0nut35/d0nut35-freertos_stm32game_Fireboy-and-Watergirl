@@ -70,3 +70,5 @@ fire_ice1\driver_timer.o: BSP\driver_key.h
 fire_ice1\driver_timer.o: BSP\driver_mpu6050.h
 fire_ice1\driver_timer.o: BSP\driver_rotary_encoder.h
 fire_ice1\driver_timer.o: ./Myapp/game1.h
+fire_ice1\driver_timer.o: ./Myapp/menu.h
+fire_ice1\driver_timer.o: ./Myapp/Music.h

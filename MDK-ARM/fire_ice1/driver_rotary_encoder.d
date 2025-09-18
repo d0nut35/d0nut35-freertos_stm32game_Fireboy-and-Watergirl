@@ -71,3 +71,5 @@ fire_ice1\driver_rotary_encoder.o: BSP\driver_key.h
 fire_ice1\driver_rotary_encoder.o: BSP\driver_mpu6050.h
 fire_ice1\driver_rotary_encoder.o: BSP\driver_rotary_encoder.h
 fire_ice1\driver_rotary_encoder.o: ./Myapp/game1.h
+fire_ice1\driver_rotary_encoder.o: ./Myapp/menu.h
+fire_ice1\driver_rotary_encoder.o: ./Myapp/Music.h

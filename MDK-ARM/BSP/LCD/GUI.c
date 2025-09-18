@@ -175,7 +175,7 @@ void LCD_DrawRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2)
 ******************************************************************************/  
 void LCD_DrawFillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2)
 {
-	LCD_Fill(x1,y1,x2,y2,POINT_COLOR);
+	LCD_Fill(x1,y1,x2,y2,0XEF5B);
 }
  
 /*****************************************************************************
@@ -452,7 +452,7 @@ void LCD_ShowString(uint16_t x,uint16_t y,uint8_t size,uint8_t *p,uint8_t mode)
     {   
 		if(x>(lcddev.width-1)||y>(lcddev.height-1)) 
 		return;     
-        LCD_ShowChar(x,y,POINT_COLOR,BACK_COLOR,*p,size,mode);
+        LCD_ShowChar(x,y,BLACK,0XEF5B,*p,size,mode);
         x+=size/2;
         p++;
     }  
@@ -495,12 +495,12 @@ void LCD_ShowNum(uint16_t x,uint16_t y,uint32_t num,uint8_t len,uint8_t size)
 		{
 			if(temp==0)
 			{
-				LCD_ShowChar(x+(size/2)*t,y,POINT_COLOR,BACK_COLOR,' ',size,0);
+				LCD_ShowChar(x+(size/2)*t,y,BLACK,GRAY,' ',size,0);
 				continue;
 			}else enshow=1; 
 		 	 
 		}
-	 	LCD_ShowChar(x+(size/2)*t,y,POINT_COLOR,BACK_COLOR,temp+'0',size,0); 
+	 	LCD_ShowChar(x+(size/2)*t,y,BLACK,GRAY,temp+'0',size,0); 
 	}
 } 
 

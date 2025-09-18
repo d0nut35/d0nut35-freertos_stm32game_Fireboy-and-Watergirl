@@ -66,6 +66,7 @@ void mdelay(int ms);
  ***********************************************************************/
 uint64_t system_get_ns(void);
 uint64_t system_get_us(void);
+uint64_t system_get_s(void);
 
 #endif /* _DRIVER_TIMER_H */
 

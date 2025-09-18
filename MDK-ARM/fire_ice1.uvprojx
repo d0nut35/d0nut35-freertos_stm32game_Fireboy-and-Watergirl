@@ -1295,6 +1295,16 @@
               <FileType>5</FileType>
               <FilePath>.\Myapp\menu.h</FilePath>
             </File>
+            <File>
+              <FileName>Music.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Myapp\Music.c</FilePath>
+            </File>
+            <File>
+              <FileName>Music.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Myapp\Music.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

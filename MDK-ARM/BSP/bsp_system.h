@@ -30,10 +30,9 @@
 #include "driver_mpu6050.h"
 #include "driver_rotary_encoder.h"
 
-
-
 #include "game1.h"
-
+#include "menu.h"
+#include "Music.h"
 
 #endif
 

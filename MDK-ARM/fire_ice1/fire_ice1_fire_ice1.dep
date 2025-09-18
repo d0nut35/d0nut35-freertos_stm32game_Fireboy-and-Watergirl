@@ -1,6 +1,6 @@
 Dependencies for Project 'fire_ice1', Target 'fire_ice1': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (startup_stm32f407xx.s)(0x68CAAD7C)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include--pd "__UVISION_VERSION SETA 538" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f407xx.lst --xref -o fire_ice1\startup_stm32f407xx.o --depend fire_ice1\startup_stm32f407xx.d)
+F (startup_stm32f407xx.s)(0x68CC4A8C)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include--pd "__UVISION_VERSION SETA 538" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f407xx.lst --xref -o fire_ice1\startup_stm32f407xx.o --depend fire_ice1\startup_stm32f407xx.d)
 F (../Core/Src/main.c)(0x68C9AC78)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\main.o --omf_browse fire_ice1\main.crf --depend fire_ice1\main.d)
 I (../Core/Inc/main.h)(0x68C9945C)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x686FE064)
@@ -55,7 +55,7 @@ I (../Core/Inc/i2c.h)(0x68C92944)
 I (../Core/Inc/spi.h)(0x68C52520)
 I (../Core/Inc/tim.h)(0x68C68A89)
 I (../Core/Inc/gpio.h)(0x68C2F943)
-I (./BSP/bsp_system.h)(0x68C9AC88)
+I (./BSP/bsp_system.h)(0x68CC7464)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\string.h)(0x6025237E)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdlib.h)(0x60252374)
@@ -64,13 +64,15 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x686FE020)
-I (./BSP/driver_timer.h)(0x68C930D4)
+I (./BSP/driver_timer.h)(0x68CC17AA)
 I (./BSP/LCD/gui.h)(0x68C821FA)
 I (./BSP/LCD/lcd.h)(0x68C69FCC)
 I (./BSP/driver_key.h)(0x68C9C774)
 I (./BSP/driver_mpu6050.h)(0x68CAC699)
 I (./BSP/driver_rotary_encoder.h)(0x68C8489C)
-I (./Myapp/game1.h)(0x68CC0AA4)
+I (./Myapp/game1.h)(0x68CC17DC)
+I (./Myapp/menu.h)(0x68CC7104)
+I (./Myapp/Music.h)(0x68CC6F7C)
 F (../Core/Src/gpio.c)(0x68C9945A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\gpio.o --omf_browse fire_ice1\gpio.crf --depend fire_ice1\gpio.d)
 I (../Core/Inc/gpio.h)(0x68C2F943)
 I (../Core/Inc/main.h)(0x68C9945C)
@@ -109,7 +111,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x686FE064)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x686FE064)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x686FE064)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x686FE064)
-F (../Core/Src/freertos.c)(0x68CAAC8B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\freertos.o --omf_browse fire_ice1\freertos.crf --depend fire_ice1\freertos.d)
+F (../Core/Src/freertos.c)(0x68CC746E)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\freertos.o --omf_browse fire_ice1\freertos.crf --depend fire_ice1\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x686FE020)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stddef.h)(0x6025237E)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdint.h)(0x6025237E)
@@ -157,7 +159,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x686FE064)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x686FE064)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h)(0x686FE020)
-I (./BSP/bsp_system.h)(0x68C9AC88)
+I (./BSP/bsp_system.h)(0x68CC7464)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\string.h)(0x6025237E)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdlib.h)(0x60252374)
@@ -172,13 +174,15 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x686FE020)
-I (./BSP/driver_timer.h)(0x68C930D4)
+I (./BSP/driver_timer.h)(0x68CC17AA)
 I (./BSP/LCD/gui.h)(0x68C821FA)
 I (./BSP/LCD/lcd.h)(0x68C69FCC)
 I (./BSP/driver_key.h)(0x68C9C774)
 I (./BSP/driver_mpu6050.h)(0x68CAC699)
 I (./BSP/driver_rotary_encoder.h)(0x68C8489C)
-I (./Myapp/game1.h)(0x68CC0AA4)
+I (./Myapp/game1.h)(0x68CC17DC)
+I (./Myapp/menu.h)(0x68CC7104)
+I (./Myapp/Music.h)(0x68CC6F7C)
 F (../Core/Src/adc.c)(0x68C9D0AC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\adc.o --omf_browse fire_ice1\adc.crf --depend fire_ice1\adc.d)
 I (../Core/Inc/adc.h)(0x68C6EF1A)
 I (../Core/Inc/main.h)(0x68C9945C)
@@ -1415,11 +1419,11 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x686FE020)
-F (.\BSP\bsp_system.h)(0x68C9AC88)()
-F (.\BSP\driver_timer.c)(0x68C930CE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\driver_timer.o --omf_browse fire_ice1\driver_timer.crf --depend fire_ice1\driver_timer.d)
-I (BSP\driver_timer.h)(0x68C930D4)
+F (.\BSP\bsp_system.h)(0x68CC7464)()
+F (.\BSP\driver_timer.c)(0x68CC179D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\driver_timer.o --omf_browse fire_ice1\driver_timer.crf --depend fire_ice1\driver_timer.d)
+I (BSP\driver_timer.h)(0x68CC17AA)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdint.h)(0x6025237E)
-I (BSP\bsp_system.h)(0x68C9AC88)
+I (BSP\bsp_system.h)(0x68CC7464)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\string.h)(0x6025237E)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdlib.h)(0x60252374)
@@ -1481,17 +1485,19 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x686FE020
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x686FE020)
 I (./BSP/LCD/gui.h)(0x68C821FA)
-I (./BSP/bsp_system.h)(0x68C9AC88)
+I (./BSP/bsp_system.h)(0x68CC7464)
 I (./BSP/LCD/lcd.h)(0x68C69FCC)
 I (BSP\driver_key.h)(0x68C9C774)
 I (BSP\driver_mpu6050.h)(0x68CAC699)
 I (BSP\driver_rotary_encoder.h)(0x68C8489C)
-I (./Myapp/game1.h)(0x68CC0AA4)
-F (.\BSP\driver_timer.h)(0x68C930D4)()
+I (./Myapp/game1.h)(0x68CC17DC)
+I (./Myapp/menu.h)(0x68CC7104)
+I (./Myapp/Music.h)(0x68CC6F7C)
+F (.\BSP\driver_timer.h)(0x68CC17AA)()
 F (.\BSP\LCD\FONT.H)(0x68C5AD04)()
-F (.\BSP\LCD\GUI.c)(0x68C9A7D7)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\gui.o --omf_browse fire_ice1\gui.crf --depend fire_ice1\gui.d)
+F (.\BSP\LCD\GUI.c)(0x68CC688E)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\gui.o --omf_browse fire_ice1\gui.crf --depend fire_ice1\gui.d)
 I (BSP\LCD\lcd.h)(0x68C69FCC)
-I (./BSP/bsp_system.h)(0x68C9AC88)
+I (./BSP/bsp_system.h)(0x68CC7464)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\string.h)(0x6025237E)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdlib.h)(0x60252374)
@@ -1553,18 +1559,20 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x686FE020)
-I (./BSP/driver_timer.h)(0x68C930D4)
+I (./BSP/driver_timer.h)(0x68CC17AA)
 I (./BSP/LCD/gui.h)(0x68C821FA)
 I (./BSP/LCD/lcd.h)(0x68C69FCC)
 I (./BSP/driver_key.h)(0x68C9C774)
 I (./BSP/driver_mpu6050.h)(0x68CAC699)
 I (./BSP/driver_rotary_encoder.h)(0x68C8489C)
-I (./Myapp/game1.h)(0x68CC0AA4)
+I (./Myapp/game1.h)(0x68CC17DC)
+I (./Myapp/menu.h)(0x68CC7104)
+I (./Myapp/Music.h)(0x68CC6F7C)
 I (BSP\LCD\font.h)(0x68C5AD04)
 F (.\BSP\LCD\GUI.h)(0x68C821FA)()
 F (.\BSP\LCD\lcd.c)(0x68CBBCB3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\lcd.o --omf_browse fire_ice1\lcd.crf --depend fire_ice1\lcd.d)
 I (BSP\LCD\lcd.h)(0x68C69FCC)
-I (./BSP/bsp_system.h)(0x68C9AC88)
+I (./BSP/bsp_system.h)(0x68CC7464)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\string.h)(0x6025237E)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdlib.h)(0x60252374)
@@ -1626,18 +1634,20 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x686FE020)
-I (./BSP/driver_timer.h)(0x68C930D4)
+I (./BSP/driver_timer.h)(0x68CC17AA)
 I (./BSP/LCD/gui.h)(0x68C821FA)
 I (./BSP/LCD/lcd.h)(0x68C69FCC)
 I (./BSP/driver_key.h)(0x68C9C774)
 I (./BSP/driver_mpu6050.h)(0x68CAC699)
 I (./BSP/driver_rotary_encoder.h)(0x68C8489C)
-I (./Myapp/game1.h)(0x68CC0AA4)
+I (./Myapp/game1.h)(0x68CC17DC)
+I (./Myapp/menu.h)(0x68CC7104)
+I (./Myapp/Music.h)(0x68CC6F7C)
 F (.\BSP\LCD\lcd.h)(0x68C69FCC)()
-F (.\BSP\LCD\pic.h)(0x68CC0B65)()
+F (.\BSP\LCD\pic.h)(0x68CC4B8B)()
 F (.\BSP\driver_key.c)(0x68CA9DC5)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\driver_key.o --omf_browse fire_ice1\driver_key.crf --depend fire_ice1\driver_key.d)
 I (BSP\driver_key.h)(0x68C9C774)
-I (BSP\bsp_system.h)(0x68C9AC88)
+I (BSP\bsp_system.h)(0x68CC7464)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\string.h)(0x6025237E)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdlib.h)(0x60252374)
@@ -1699,13 +1709,15 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x686FE020)
-I (BSP\driver_timer.h)(0x68C930D4)
+I (BSP\driver_timer.h)(0x68CC17AA)
 I (./BSP/LCD/gui.h)(0x68C821FA)
-I (./BSP/bsp_system.h)(0x68C9AC88)
+I (./BSP/bsp_system.h)(0x68CC7464)
 I (./BSP/LCD/lcd.h)(0x68C69FCC)
 I (BSP\driver_mpu6050.h)(0x68CAC699)
 I (BSP\driver_rotary_encoder.h)(0x68C8489C)
-I (./Myapp/game1.h)(0x68CC0AA4)
+I (./Myapp/game1.h)(0x68CC17DC)
+I (./Myapp/menu.h)(0x68CC7104)
+I (./Myapp/Music.h)(0x68CC6F7C)
 F (.\BSP\driver_key.h)(0x68C9C774)()
 F (.\BSP\driver_rotary_encoder.c)(0x68C989C1)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\driver_rotary_encoder.o --omf_browse fire_ice1\driver_rotary_encoder.crf --depend fire_ice1\driver_rotary_encoder.d)
 I (BSP\driver_rotary_encoder.h)(0x68C8489C)
@@ -1721,7 +1733,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x686FE020
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x686FE020)
-I (BSP\bsp_system.h)(0x68C9AC88)
+I (BSP\bsp_system.h)(0x68CC7464)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\string.h)(0x6025237E)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdlib.h)(0x60252374)
@@ -1771,13 +1783,15 @@ I (../Core/Inc/i2c.h)(0x68C92944)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x686FE020)
-I (BSP\driver_timer.h)(0x68C930D4)
+I (BSP\driver_timer.h)(0x68CC17AA)
 I (./BSP/LCD/gui.h)(0x68C821FA)
-I (./BSP/bsp_system.h)(0x68C9AC88)
+I (./BSP/bsp_system.h)(0x68CC7464)
 I (./BSP/LCD/lcd.h)(0x68C69FCC)
 I (BSP\driver_key.h)(0x68C9C774)
 I (BSP\driver_mpu6050.h)(0x68CAC699)
-I (./Myapp/game1.h)(0x68CC0AA4)
+I (./Myapp/game1.h)(0x68CC17DC)
+I (./Myapp/menu.h)(0x68CC7104)
+I (./Myapp/Music.h)(0x68CC6F7C)
 F (.\BSP\driver_rotary_encoder.h)(0x68C8489C)()
 F (.\BSP\driver_mpu6050.c)(0x68CAC6D4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\driver_mpu6050.o --omf_browse fire_ice1\driver_mpu6050.crf --depend fire_ice1\driver_mpu6050.d)
 I (BSP\driver_mpu6050.h)(0x68CAC699)
@@ -1793,7 +1807,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x686FE020
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x686FE020)
-I (BSP\bsp_system.h)(0x68C9AC88)
+I (BSP\bsp_system.h)(0x68CC7464)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\string.h)(0x6025237E)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdlib.h)(0x60252374)
@@ -1843,16 +1857,18 @@ I (../Core/Inc/i2c.h)(0x68C92944)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x686FE020)
-I (BSP\driver_timer.h)(0x68C930D4)
+I (BSP\driver_timer.h)(0x68CC17AA)
 I (./BSP/LCD/gui.h)(0x68C821FA)
-I (./BSP/bsp_system.h)(0x68C9AC88)
+I (./BSP/bsp_system.h)(0x68CC7464)
 I (./BSP/LCD/lcd.h)(0x68C69FCC)
 I (BSP\driver_key.h)(0x68C9C774)
 I (BSP\driver_rotary_encoder.h)(0x68C8489C)
-I (./Myapp/game1.h)(0x68CC0AA4)
+I (./Myapp/game1.h)(0x68CC17DC)
+I (./Myapp/menu.h)(0x68CC7104)
+I (./Myapp/Music.h)(0x68CC6F7C)
 F (.\BSP\driver_mpu6050.h)(0x68CAC699)()
 F (.\BSP\driver_irq.c)(0x68C9948A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\driver_irq.o --omf_browse fire_ice1\driver_irq.crf --depend fire_ice1\driver_irq.d)
-I (BSP\driver_timer.h)(0x68C930D4)
+I (BSP\driver_timer.h)(0x68CC17AA)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (../Core/Inc/tim.h)(0x68C68A89)
 I (../Core/Inc/main.h)(0x68C9945C)
@@ -1890,7 +1906,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x686FE064)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x686FE064)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x686FE064)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x686FE064)
-I (BSP\bsp_system.h)(0x68C9AC88)
+I (BSP\bsp_system.h)(0x68CC7464)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\string.h)(0x6025237E)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdlib.h)(0x60252374)
@@ -1916,15 +1932,17 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x686FE020
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x686FE020)
 I (./BSP/LCD/gui.h)(0x68C821FA)
-I (./BSP/bsp_system.h)(0x68C9AC88)
+I (./BSP/bsp_system.h)(0x68CC7464)
 I (./BSP/LCD/lcd.h)(0x68C69FCC)
 I (BSP\driver_key.h)(0x68C9C774)
 I (BSP\driver_mpu6050.h)(0x68CAC699)
 I (BSP\driver_rotary_encoder.h)(0x68C8489C)
-I (./Myapp/game1.h)(0x68CC0AA4)
-F (.\Myapp\game1.c)(0x68CC1191)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\game1.o --omf_browse fire_ice1\game1.crf --depend fire_ice1\game1.d)
-I (Myapp\game1.h)(0x68CC0AA4)
-I (./BSP/bsp_system.h)(0x68C9AC88)
+I (./Myapp/game1.h)(0x68CC17DC)
+I (./Myapp/menu.h)(0x68CC7104)
+I (./Myapp/Music.h)(0x68CC6F7C)
+F (.\Myapp\game1.c)(0x68CC6CCA)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\game1.o --omf_browse fire_ice1\game1.crf --depend fire_ice1\game1.d)
+I (Myapp\game1.h)(0x68CC17DC)
+I (./BSP/bsp_system.h)(0x68CC7464)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\string.h)(0x6025237E)
 I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdlib.h)(0x60252374)
@@ -1986,14 +2004,91 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x686FE020)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x686FE020)
-I (./BSP/driver_timer.h)(0x68C930D4)
+I (./BSP/driver_timer.h)(0x68CC17AA)
 I (./BSP/LCD/gui.h)(0x68C821FA)
 I (./BSP/LCD/lcd.h)(0x68C69FCC)
 I (./BSP/driver_key.h)(0x68C9C774)
 I (./BSP/driver_mpu6050.h)(0x68CAC699)
 I (./BSP/driver_rotary_encoder.h)(0x68C8489C)
-I (./Myapp/game1.h)(0x68CC0AA4)
-I (./BSP/LCD/pic.h)(0x68CC0B65)
-F (.\Myapp\game1.h)(0x68CC0AA4)()
-F (.\Myapp\menu.c)(0x68C9C783)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\menu.o --omf_browse fire_ice1\menu.crf --depend fire_ice1\menu.d)
-F (.\Myapp\menu.h)(0x68C9CE97)()
+I (./Myapp/game1.h)(0x68CC17DC)
+I (./Myapp/menu.h)(0x68CC7104)
+I (./Myapp/Music.h)(0x68CC6F7C)
+I (./BSP/LCD/pic.h)(0x68CC4B8B)
+F (.\Myapp\game1.h)(0x68CC17DC)()
+F (.\Myapp\menu.c)(0x68CC70F7)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\menu.o --omf_browse fire_ice1\menu.crf --depend fire_ice1\menu.d)
+I (Myapp\menu.h)(0x68CC7104)
+I (./BSP/bsp_system.h)(0x68CC7464)
+I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (D:\programfile\MDK\Core\ARM\ARMCC\include\string.h)(0x6025237E)
+I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (D:\programfile\MDK\Core\ARM\ARMCC\include\math.h)(0x60252378)
+I (D:\programfile\MDK\Core\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (../Core/Inc/main.h)(0x68C9945C)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x686FE064)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x68C92944)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x686FE064)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x686FE064)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h)(0x686FE064)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x686FE01E)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x686FE01E)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x686FE01E)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x686FE01E)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x686FE01E)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x686FE064)
+I (D:\programfile\MDK\Core\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x686FE064)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x686FE064)
+I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h)(0x686FE020)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x686FE020)
+I (../Core/Inc/FreeRTOSConfig.h)(0x68C9D2BD)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x686FE020)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x686FE020)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x686FE020)
+I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h)(0x686FE020)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x686FE020)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x686FE020)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x686FE020)
+I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h)(0x686FE020)
+I (../Core/Inc/spi.h)(0x68C52520)
+I (../Core/Inc/gpio.h)(0x68C2F943)
+I (../Core/Inc/dma.h)(0x68C6AF92)
+I (../Core/Inc/adc.h)(0x68C6EF1A)
+I (../Core/Inc/tim.h)(0x68C68A89)
+I (../Core/Inc/i2c.h)(0x68C92944)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x686FE020)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x686FE020)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x686FE020)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x686FE020)
+I (./BSP/driver_timer.h)(0x68CC17AA)
+I (./BSP/LCD/gui.h)(0x68C821FA)
+I (./BSP/LCD/lcd.h)(0x68C69FCC)
+I (./BSP/driver_key.h)(0x68C9C774)
+I (./BSP/driver_mpu6050.h)(0x68CAC699)
+I (./BSP/driver_rotary_encoder.h)(0x68C8489C)
+I (./Myapp/game1.h)(0x68CC17DC)
+I (./Myapp/menu.h)(0x68CC7104)
+I (./Myapp/Music.h)(0x68CC6F7C)
+F (.\Myapp\menu.h)(0x68CC7104)()
+F (.\Myapp\Music.c)(0x68CC745B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ./BSP -I ./BSP/LCD -I ../Middlewares/LVGL/GUI -I ../Middlewares/LVGL/GUI/lvgl -I ../Middlewares/LVGL/GUI/lvgl/examples -I ../Middlewares/LVGL/GUI/lvgl/examples/porting -I ../Middlewares/LVGL/GUI_APP/demos -I ../Middlewares/LVGL/GUI/lvgl/src/core -I ../Middlewares/LVGL/GUI/lvgl/src/draw -I ../Middlewares/LVGL/GUI/lvgl/src/extra -I ../Middlewares/LVGL/GUI/lvgl/src/font -I ../Middlewares/LVGL/GUI/lvgl/src/gpu -I ../Middlewares/LVGL/GUI/lvgl/src/hal -I ../Middlewares/LVGL/GUI/lvgl/src/misc -I ../Middlewares/LVGL/GUI/lvgl/src/widgets -I ./Myapp-I.\RTE\_fire_ice1-ID:\programfile\MDK\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o fire_ice1\music.o --omf_browse fire_ice1\music.crf --depend fire_ice1\music.d)
+I (Myapp\Music.h)(0x68CC6F7C)
+F (.\Myapp\Music.h)(0x68CC6F7C)()
