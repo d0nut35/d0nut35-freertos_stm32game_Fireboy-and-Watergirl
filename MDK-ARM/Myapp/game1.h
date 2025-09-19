@@ -13,6 +13,7 @@ extern uint8_t duilie_flag;
 extern uint8_t g_level;
 extern uint8_t debug11;
 extern struct game_point g_point;
+extern struct game_point g_point_last;
 
 void game1_task(void *params);
 

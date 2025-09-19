@@ -124,7 +124,7 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
-    xTaskCreate(menu_task, "MenuTask", 128, NULL, osPriorityNormal, &menuTaskHandle);
+   xTaskCreate(menu_task, "MenuTask", 128, NULL, osPriorityNormal, &menuTaskHandle);
   //xTaskCreate(game1_task, "GameTask", 128, NULL, osPriorityNormal, NULL);
   //xTaskCreate(MPU6050_Task, "GameTask", 128, NULL, osPriorityNormal, NULL);
   
@@ -149,6 +149,8 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
+	  //W25Q64_Erase(4096,4096);
+	  //W25Q64_Test();
 	  /*播放音乐，调节声音*/
 	  
   }

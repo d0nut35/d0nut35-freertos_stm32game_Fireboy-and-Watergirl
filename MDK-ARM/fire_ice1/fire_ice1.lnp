@@ -50,6 +50,7 @@
 "fire_ice1\driver_rotary_encoder.o"
 "fire_ice1\driver_mpu6050.o"
 "fire_ice1\driver_irq.o"
+"fire_ice1\driver_spiflash_w25q64.o"
 "fire_ice1\game1.o"
 "fire_ice1\menu.o"
 "fire_ice1\music.o"

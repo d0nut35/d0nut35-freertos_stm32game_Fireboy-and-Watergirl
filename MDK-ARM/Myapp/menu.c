@@ -290,9 +290,20 @@ void game_menu(void)
 
 void data_menu(void)
 {
-	extern const unsigned char gImage_map1[307200];
-	Gui_Drawbmp16(0,0,gImage_map1,480,320);
+//	extern const unsigned char gImage_map1[307200];
+//	Gui_Drawbmp16(0,0,gImage_map1,480,320);
+	LCD_Clear(WHITE);
+	uint8_t BUF[5];
 	
+	while(1)
+	{
+	W25Q64_Read(4096,BUF,5);
+	LCD_ShowNum(0,0,(uint32_t)BUF[0],3,20);
+	LCD_ShowNum(0,40,(uint32_t)BUF[1],3,20);
+	LCD_ShowNum(0,80,(uint32_t)BUF[2],3,20);
+	LCD_ShowNum(0,120,(uint32_t)BUF[3],3,20);
+	LCD_ShowNum(0,160,(uint32_t)BUF[4],3,20);
+	}
 }
 
 

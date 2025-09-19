@@ -29,6 +29,7 @@
 #include "driver_key.h"
 #include "driver_mpu6050.h"
 #include "driver_rotary_encoder.h"
+#include "driver_spiflash_w25q64.h"
 
 #include "game1.h"
 #include "menu.h"

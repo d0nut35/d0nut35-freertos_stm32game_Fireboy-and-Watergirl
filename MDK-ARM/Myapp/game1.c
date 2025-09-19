@@ -86,6 +86,104 @@ static QueueHandle_t g_xQueneJoystick; /*摇杆队列*/
 static void InputTask(void *params);
 
 
+void write_point_save(struct game_point *g_point,uint8_t level)
+{
+	uint8_t buf_old[5];
+	uint8_t buf[5];
+	W25Q64_Read(4096,buf_old,5);
+	switch(level)
+	{
+		case 1:
+		{
+			if(g_point->gp1 > buf_old[0])
+			{
+				W25Q64_Erase(4096,4096);
+				buf[0]=g_point->gp1;
+				buf[1]=buf_old[1];
+				buf[2]=buf_old[2];
+				buf[3]=buf_old[3];
+				buf[4]=buf_old[4];
+				W25Q64_Write(4096,buf,5);
+			}
+			break;
+        }
+		
+        case 2:
+		{
+			if(g_point->gp2 > buf_old[1])
+			{
+				W25Q64_Erase(4096,4096);
+				buf[0]=buf_old[0];
+				buf[1]=g_point->gp2;
+				buf[2]=buf_old[2];
+				buf[3]=buf_old[3];
+				buf[4]=buf_old[4];
+				W25Q64_Write(4096,buf,5);
+			}
+			break;
+        }
+
+        case 3:
+		{
+			if(g_point->gp3 > buf_old[2])
+			{
+				W25Q64_Erase(4096,4096);
+				buf[0]=buf_old[0];
+				buf[1]=buf_old[1];
+				buf[2]=g_point->gp3;
+				buf[3]=buf_old[3];
+				buf[4]=buf_old[4];
+				W25Q64_Write(4096,buf,5);
+			}
+			break;
+        }
+		
+        case 4:
+		{
+			if(g_point->gp4 > buf_old[3])
+			{
+				W25Q64_Erase(4096,4096);
+				buf[0]=buf_old[0];
+				buf[1]=buf_old[1];
+				buf[2]=buf_old[2];
+				buf[3]=g_point->gp4;
+				buf[4]=buf_old[4];
+				W25Q64_Write(4096,buf,5);
+			}
+			break;
+        }
+
+		case 5:
+		{
+			if(g_point->gp5 > buf_old[4])
+			{
+				W25Q64_Erase(4096,4096);
+				buf[0]=buf_old[0];
+				buf[1]=buf_old[1];
+				buf[2]=buf_old[2];
+				buf[3]=buf_old[3];
+				buf[4]=g_point->gp5;
+				W25Q64_Write(4096,buf,5);
+				break;
+			}
+        }
+		
+		default:
+        {
+            break;
+        }
+	
+	}
+
+}
+
+
+
+
+
+
+
+
 /**********************************************************************
  * 函数名称： Map_Init
  * 功能描述： 地图初始化,初始化角色位置，地图分数位置
@@ -513,11 +611,13 @@ void game1_draw(struct Character_coordinates *cdata, Character_actcoordinates *p
 		/*两人走到门获胜*/
 		if((person->X1_ACTPosition>=(fire_door-10))&&(person->X1_ACTPosition<=(fire_door+10))&&(person->X2_ACTPosition>=(ice_door-10))&&(person->X2_ACTPosition<=(ice_door+10)))
 		{
-			char text1[]="L E V E L 1";
-			LCD_ShowString222(190,50,20,(uint8_t*)text1,1,WHITE,DARKBLUE );
+			char text1[]=" W I N !";
+			LCD_ShowString222(190,50,20,(uint8_t*)text1,1,WHITE,RED );
 			
-		
-			/*弹到菜单展示分数（返回or重新开始）*/	 
+			
+			/*弹到菜单展示分数（返回or重新开始）*/
+			write_point_save(&g_point,g_level);
+			
 			break;
 		
 		}
@@ -530,6 +630,9 @@ void game1_draw(struct Character_coordinates *cdata, Character_actcoordinates *p
 		{
 			if(((person->X1_ACTPosition >= 175)&&(person->X1_ACTPosition <= 215)&&(person->Y1_ACTPosition ==floor))||((person->X2_ACTPosition >= 175)&&(person->X2_ACTPosition <= 215)&&(person->Y2_ACTPosition ==floor)))
 			{
+				char text1[]=" L O S E!";
+			    LCD_ShowString222(190,50,20,(uint8_t*)text1,1,WHITE,RED );
+				
 				/*弹到菜单展示分数（返回or重新开始）*/	
 				LCD_ShowNum(60,0,0,3,20);
 				g_point.gp4=0;
@@ -541,6 +644,9 @@ void game1_draw(struct Character_coordinates *cdata, Character_actcoordinates *p
 		{
 			if(((person->X1_ACTPosition >= 175)&&(person->X1_ACTPosition <= 215)&&(person->Y1_ACTPosition ==floor))||((person->X2_ACTPosition >= 335)&&(person->X2_ACTPosition <= 375)&&(person->Y2_ACTPosition ==floor)))
 			{
+				char text1[]=" L O S E!";
+			    LCD_ShowString222(190,50,20,(uint8_t*)text1,1,WHITE,RED );
+				
 				/*弹到菜单展示分数（返回or重新开始）*/	
 				LCD_ShowNum(60,0,0,3,20);
 				g_point.gp5=0;

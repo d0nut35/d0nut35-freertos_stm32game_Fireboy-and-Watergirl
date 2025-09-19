@@ -1270,6 +1270,16 @@
               <FileType>1</FileType>
               <FilePath>.\BSP\driver_irq.c</FilePath>
             </File>
+            <File>
+              <FileName>driver_spiflash_w25q64.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\BSP\driver_spiflash_w25q64.c</FilePath>
+            </File>
+            <File>
+              <FileName>driver_spiflash_w25q64.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\BSP\driver_spiflash_w25q64.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

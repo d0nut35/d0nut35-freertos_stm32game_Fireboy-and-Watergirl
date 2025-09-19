@@ -75,6 +75,8 @@ void Error_Handler(void);
 #define D_KEY_GPIO_Port GPIOD
 #define C_KEY_Pin GPIO_PIN_15
 #define C_KEY_GPIO_Port GPIOD
+#define FLASH_CS_Pin GPIO_PIN_9
+#define FLASH_CS_GPIO_Port GPIOC
 #define LCD_RST_Pin GPIO_PIN_15
 #define LCD_RST_GPIO_Port GPIOA
 #define key_enter_Pin GPIO_PIN_1

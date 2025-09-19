@@ -70,6 +70,7 @@ fire_ice1\driver_mpu6050.o: ./BSP/LCD/lcd.h
 fire_ice1\driver_mpu6050.o: BSP\driver_key.h
 fire_ice1\driver_mpu6050.o: BSP\driver_mpu6050.h
 fire_ice1\driver_mpu6050.o: BSP\driver_rotary_encoder.h
+fire_ice1\driver_mpu6050.o: BSP\driver_spiflash_w25q64.h
 fire_ice1\driver_mpu6050.o: ./Myapp/game1.h
 fire_ice1\driver_mpu6050.o: ./Myapp/menu.h
 fire_ice1\driver_mpu6050.o: ./Myapp/Music.h
