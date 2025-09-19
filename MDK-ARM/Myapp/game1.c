@@ -17,6 +17,7 @@ uint8_t duilie_flag=0;
 uint8_t g_level=0;//关卡难度选择
 uint8_t debug11=0;
 struct game_point g_point;/*分数*/
+struct game_point g_point_last;/*分数*/
 
 
 /*不同难度关卡所得的分数，和时间，捡宝石有关*/
@@ -465,13 +466,55 @@ void game1_draw(struct Character_coordinates *cdata, Character_actcoordinates *p
 		
 		dtime += (time-last_time);
 		last_time = time;
-	
-		LCD_ShowNum(60,0,g_point.gp5,3,20);
+		
+		
+			switch (g_level)
+			{
+				case 1:
+				{
+					LCD_ShowNum(60,0,g_point.gp1,3,20);
+					break;
+				}
+		
+				case 2:
+				{
+					LCD_ShowNum(60,0,g_point.gp2,3,20);
+					break;
+				}
+				
+				case 3:
+				{
+					LCD_ShowNum(60,0,g_point.gp3,3,20);
+					
+					break;
+				}
+		
+				case 4:
+				{
+					LCD_ShowNum(60,0,g_point.gp4,3,20);
+					break;
+				}
+				
+				case 5:
+				{
+					LCD_ShowNum(60,0,g_point.gp5,3,20);
+					
+					break;
+				}
+				
+				default:
+				{
+					break;
+				}
+			}
+		
+		
 		
 		/*两人走到门获胜*/
 		if((person->X1_ACTPosition>=(fire_door-10))&&(person->X1_ACTPosition<=(fire_door+10))&&(person->X2_ACTPosition>=(ice_door-10))&&(person->X2_ACTPosition<=(ice_door+10)))
 		{
-		
+			char text1[]="L E V E L 1";
+			LCD_ShowString222(190,50,20,(uint8_t*)text1,1,WHITE,DARKBLUE );
 			
 		
 			/*弹到菜单展示分数（返回or重新开始）*/	 
@@ -489,7 +532,7 @@ void game1_draw(struct Character_coordinates *cdata, Character_actcoordinates *p
 			{
 				/*弹到菜单展示分数（返回or重新开始）*/	
 				LCD_ShowNum(60,0,0,3,20);
-				g_point.gp5=0;
+				g_point.gp4=0;
 				break;
 			}
 	
@@ -566,10 +609,14 @@ void game1_draw(struct Character_coordinates *cdata, Character_actcoordinates *p
 
 void game1_task(void *params)
 {
+	TaskHandle_t INPUTTaskHandle = NULL;
+	
 	/* 创建队列,队列集,创建输入任务InputTask */
+	if(!g_xQueueCharacter&&!g_xQueueSetInput)
+	{
 	g_xQueueCharacter = xQueueCreate(10, sizeof(struct Character_coordinates));
 	g_xQueueSetInput =xQueueCreateSet(JOYSTICK_QUEUE_LEN + MPU6050_QUEUE_LEN);
-	
+	}
 	g_xQueneJoystick = GetQueueJoystick();
 	//g_xQueueMPU6050 = GetQueueMPU6050();
 	
@@ -582,14 +629,15 @@ void game1_task(void *params)
 	
 	/*创建任务*/
 	//xTaskCreate(MPU6050_Task, "MPU6050Task", 128, NULL, osPriorityNormal, NULL);
-	xTaskCreate(InputTask, "InputTask", 128, NULL, osPriorityNormal, NULL);
+	
+	xTaskCreate(InputTask, "InputTask", 128, NULL, osPriorityNormal, &INPUTTaskHandle);
 	
 	
 	/*钻石位置初始化*/
 	diamond_position dia_data={0,0,0,0};
 	
 	/*地图初始化*/
-	g_level=5;
+	
 	Map_Init(g_level,&dia_data);
 	
 	/*位置变量初始化*/
@@ -615,8 +663,15 @@ void game1_task(void *params)
 	/*游戏绘制*/
 	game1_draw(&cdata,&person,&last_person,g_level,&dia_data,&pf,time,last_time,&g_xQueueCharacter);
 		
-
 	
+	xTaskCreate(menu_task, "MenuTask", 128, NULL, osPriorityNormal, NULL);
+	
+	duilie_flag=0;
+	
+	vTaskDelete(INPUTTaskHandle);
+	vTaskDelete(NULL);
+	//vQueueDelete(g_xQueueCharacter);
+	//vQueueDelete(g_xQueueSetInput);
 
 }
 

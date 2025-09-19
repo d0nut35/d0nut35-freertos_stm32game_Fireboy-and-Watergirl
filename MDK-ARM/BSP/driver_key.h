@@ -35,12 +35,20 @@ typedef struct{
 
 }Joystick_Data;
 
+typedef struct{
+	int8_t A_KEY;
+	int8_t B_KEY;
+	int8_t C_KEY;
+	int8_t D_KEY;
+	int8_t E_KEY;
 
+}KEY_Data;
 
 extern ADC1_SAMPLING ADC1_sampling;
 extern Joystick_Data Js_data;
 
 void ADC_Start(void);
 QueueHandle_t GetQueueJoystick(void);
+void key_read(KEY_Data *k_data);
 
 #endif

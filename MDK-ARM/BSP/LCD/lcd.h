@@ -116,8 +116,11 @@ extern uint16_t  BACK_COLOR; //背景颜色.默认为白色
 //#define	LCD_RS_CLR	LCD_RS=0 //GPIO_TYPE->BSRRH=1<<LCD_RS     //数据/命令  PB10	 
 //#define	LCD_RST_CLR	LCD_RST=0 //GPIO_TYPE->BSRRH=1<<LCD_RST    //复位			  PB12
 
-#define	LCD_LED_SET HAL_GPIO_WritePin(LCD_LED_GPIO_Port,LCD_LED_Pin,GPIO_PIN_SET)
-#define	LCD_LED_CLR HAL_GPIO_WritePin(LCD_LED_GPIO_Port,LCD_LED_Pin,GPIO_PIN_RESET)
+//#define	LCD_LED_SET HAL_GPIO_WritePin(LCD_LED_GPIO_Port,LCD_LED_Pin,GPIO_PIN_SET)
+//#define	LCD_LED_CLR HAL_GPIO_WritePin(LCD_LED_GPIO_Port,LCD_LED_Pin,GPIO_PIN_RESET)
+
+#define	LCD_LED_SET __HAL_TIM_SET_COMPARE(&htim12, TIM_CHANNEL_1, 1000);//HAL_GPIO_WritePin(LCD_LED_GPIO_Port,LCD_LED_Pin,GPIO_PIN_SET)
+#define	LCD_LED_CLR __HAL_TIM_SET_COMPARE(&htim12, TIM_CHANNEL_1, 0);
 
 #define	LCD_CS_SET  HAL_GPIO_WritePin(LCD_CS_GPIO_Port,LCD_CS_Pin,GPIO_PIN_SET)//LCD_CS=1 //GPIO_TYPE->BSRRL=1<<LCD_CS    //?????  	PB11
 #define	LCD_RS_SET	HAL_GPIO_WritePin(LCD_DC_GPIO_Port,LCD_DC_Pin,GPIO_PIN_SET)//LCD_RS=1 //GPIO_TYPE->BSRRL=1<<LCD_RS    //????/????  PB10	  
@@ -169,7 +172,7 @@ uint16_t  LCD_ReadPoint(uint16_t x,uint16_t y); //读点
 void LCD_DrawLine(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2);
 void LCD_DrawRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2);		   
 void LCD_SetWindows(uint16_t xStar, uint16_t yStar,uint16_t xEnd,uint16_t yEnd);
-
+void LCD_WR_REG(uint8_t data);
 uint16_t LCD_RD_DATA(void);//读取LCD数据									    
 void LCD_WriteReg(uint8_t LCD_Reg, uint16_t LCD_RegValue);
 void LCD_WR_DATA(uint8_t data);

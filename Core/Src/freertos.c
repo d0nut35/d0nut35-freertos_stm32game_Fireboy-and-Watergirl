@@ -46,7 +46,8 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 static SemaphoreHandle_t g_xI2CMutex; 
-
+TaskHandle_t game1TaskHandle = NULL;
+TaskHandle_t menuTaskHandle = NULL;
 
 
 /* USER CODE END Variables */
@@ -88,6 +89,7 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
   */
 void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
+	HAL_TIM_PWM_Start(&htim12,TIM_CHANNEL_1);
 	g_xI2CMutex = xSemaphoreCreateMutex();//i2c����������
 	
 	LCD_Init();
@@ -95,6 +97,7 @@ void MX_FREERTOS_Init(void) {
 	ADC_Start();//��ʼ����ҡ������
 	RotaryEncoder_Init();//��ת��������ʼ��
 	MPU6050_Init();
+	
 	
   /* USER CODE END Init */
 
@@ -121,7 +124,7 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
-    xTaskCreate(menu_task, "MenuTask", 128, NULL, osPriorityNormal, NULL);
+    xTaskCreate(menu_task, "MenuTask", 128, NULL, osPriorityNormal, &menuTaskHandle);
   //xTaskCreate(game1_task, "GameTask", 128, NULL, osPriorityNormal, NULL);
   //xTaskCreate(MPU6050_Task, "GameTask", 128, NULL, osPriorityNormal, NULL);
   

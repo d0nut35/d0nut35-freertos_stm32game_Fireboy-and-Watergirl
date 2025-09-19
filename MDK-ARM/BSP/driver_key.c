@@ -93,6 +93,17 @@ void Joystick_Analysis(void)
 }
 
 
+void key_read(KEY_Data *k_data)
+{
+	k_data->A_KEY = HAL_GPIO_ReadPin(A_KEY_GPIO_Port,A_KEY_Pin); 
+	k_data->B_KEY = HAL_GPIO_ReadPin(B_KEY_GPIO_Port,B_KEY_Pin); 
+	k_data->C_KEY = HAL_GPIO_ReadPin(C_KEY_GPIO_Port,C_KEY_Pin); 
+	k_data->D_KEY = HAL_GPIO_ReadPin(D_KEY_GPIO_Port,D_KEY_Pin);
+    k_data->E_KEY = HAL_GPIO_ReadPin(key_enter_GPIO_Port,key_enter_Pin); 	
+}
+
+
+
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
 	if (hadc == &hadc1)

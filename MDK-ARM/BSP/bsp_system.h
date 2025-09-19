@@ -34,5 +34,9 @@
 #include "menu.h"
 #include "Music.h"
 
+extern TaskHandle_t game1TaskHandle ;
+extern TaskHandle_t menuTaskHandle ;
+
+
 #endif
 
