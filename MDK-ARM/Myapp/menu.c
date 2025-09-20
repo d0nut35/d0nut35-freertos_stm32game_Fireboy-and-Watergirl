@@ -5,9 +5,11 @@ static char text10[]="P O I N T";
 static char text3[]="F I R E && I C E";
 static char text30[]="S E L E C T  L E V E L";
 static char text4[]="> >";
+static char text14[]="R e c o r d";
+static uint8_t back_flag=0;
 
 
-/*控制灯的亮度, 0-1000*/
+/*控制灯的亮度, 0-500*/
 void LCD_LIGHT(uint16_t num)
 {
 	__HAL_TIM_SET_COMPARE(&htim12, TIM_CHANNEL_1, num);
@@ -51,9 +53,12 @@ void main_menu(struct option_class *option1)
 	
 	while(1)
 	{
+
+		
 		
 		KEY_Data k_data;
 		key_read(&k_data);
+		
 		
 		if(!k_data.E_KEY)
 		{
@@ -107,6 +112,8 @@ void main_menu(struct option_class *option1)
 
 void level_menu(void)
 {
+	back_flag=0;
+	
 	extern const unsigned char gImage_map1[307200];
 	Gui_Drawbmp16(0,0,gImage_map1,480,320);
 	
@@ -126,10 +133,28 @@ void level_menu(void)
 	uint8_t max=5;
 	while(1)
 	{
+		
+		
+		
 		//LCD_ShowString222(140,50,20,(uint8_t*)text4,1,BLACK,DARKBLUE );
 		KEY_Data k_data;
 		key_read(&k_data);
-	
+		
+		if(!k_data.B_KEY)
+		{
+			back_flag=1;
+		
+		}
+		
+		if(back_flag)
+		{
+			xTaskCreate(menu_task, "MenuTask", 128, NULL, osPriorityNormal, NULL);
+			vTaskDelete(NULL);
+		
+		}
+		
+		
+		
 		if(!k_data.E_KEY)
 		{
 			switch (Cursor)
@@ -290,19 +315,51 @@ void game_menu(void)
 
 void data_menu(void)
 {
-//	extern const unsigned char gImage_map1[307200];
-//	Gui_Drawbmp16(0,0,gImage_map1,480,320);
-	LCD_Clear(WHITE);
+	extern const unsigned char gImage_map1[307200];
+	Gui_Drawbmp16(0,0,gImage_map1,480,320);
+
 	uint8_t BUF[5];
+	back_flag=0;
+	
+	LCD_ShowString222(180,30,20,(uint8_t*)text14,1,WHITE,DARKBLUE );
 	
 	while(1)
 	{
-	W25Q64_Read(4096,BUF,5);
-	LCD_ShowNum(0,0,(uint32_t)BUF[0],3,20);
-	LCD_ShowNum(0,40,(uint32_t)BUF[1],3,20);
-	LCD_ShowNum(0,80,(uint32_t)BUF[2],3,20);
-	LCD_ShowNum(0,120,(uint32_t)BUF[3],3,20);
-	LCD_ShowNum(0,160,(uint32_t)BUF[4],3,20);
+		
+		KEY_Data k_data;
+		key_read(&k_data);
+		
+		if(!k_data.B_KEY)
+		{
+			back_flag=1;
+		
+		}
+		
+		if(back_flag)
+		{
+			xTaskCreate(menu_task, "MenuTask", 128, NULL, osPriorityNormal, NULL);
+			vTaskDelete(NULL);
+		
+		}
+		
+		char text1[]="L E V E L 1";
+		LCD_ShowString222(70,80,20,(uint8_t*)text1,1,WHITE,DARKBLUE );
+		strcpy(text1,"L E V E L 2");
+		LCD_ShowString222(70,110,20,(uint8_t*)text1,1,WHITE,DARKBLUE );
+		strcpy(text1,"L E V E L 3");
+		LCD_ShowString222(70,140,20,(uint8_t*)text1,1,WHITE,DARKBLUE );
+		strcpy(text1,"L E V E L 4");
+		LCD_ShowString222(70,170,20,(uint8_t*)text1,1,WHITE,DARKBLUE );
+		strcpy(text1,"L E V E L 5");
+		LCD_ShowString222(70,200,20,(uint8_t*)text1,1,WHITE,DARKBLUE );
+		
+		W25Q64_Read(4096,BUF,5);
+		
+		LCD_ShowNum(350,80,(uint32_t)BUF[0],3,20);
+		LCD_ShowNum(350,110,(uint32_t)BUF[1],3,20);
+		LCD_ShowNum(350,140,(uint32_t)BUF[2],3,20);
+		LCD_ShowNum(350,170,(uint32_t)BUF[3],3,20);
+		LCD_ShowNum(350,200,(uint32_t)BUF[4],3,20);
 	}
 }
 
@@ -324,6 +381,7 @@ void menu_task(void *params)
 	};	
 	
 	main_menu(option1);
-
+	
+	
 }
 

@@ -37,7 +37,7 @@
 
 extern TaskHandle_t game1TaskHandle ;
 extern TaskHandle_t menuTaskHandle ;
-
+extern uint8_t light;
 
 #endif
 

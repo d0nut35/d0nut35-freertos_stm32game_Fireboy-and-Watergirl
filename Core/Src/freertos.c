@@ -48,7 +48,8 @@
 static SemaphoreHandle_t g_xI2CMutex; 
 TaskHandle_t game1TaskHandle = NULL;
 TaskHandle_t menuTaskHandle = NULL;
-
+uint8_t light=1;
+uint8_t led111=1;
 
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
@@ -89,13 +90,15 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
   */
 void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
-	HAL_TIM_PWM_Start(&htim12,TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start(&htim12,TIM_CHANNEL_1);//启用定时器通道
+	//HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_1);//启用定时器通道
 	g_xI2CMutex = xSemaphoreCreateMutex();//i2c����������
 	
 	LCD_Init();
-	  
+	extern void LCD_LIGHT(uint16_t num);
+	LCD_LIGHT(400);
 	ADC_Start();//��ʼ����ҡ������
-	RotaryEncoder_Init();//��ת��������ʼ��
+	//RotaryEncoder_Init();//��ת��������ʼ��
 	MPU6050_Init();
 	
 	
@@ -149,6 +152,44 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
+	  while(1)
+	  {	 
+		KEY_Data k_data1;
+		key_read(&k_data1);
+		if(k_data1.D_KEY==0)
+		{
+			vTaskDelay(50);
+			if(k_data1.D_KEY==0)
+			{
+				while(!k_data1.D_KEY){key_read(&k_data1); };
+				led111^=1;
+			}
+		
+		}
+		  
+		light=HAL_GPIO_ReadPin(GPIOE,GPIO_PIN_5);
+
+		
+		
+		if(!led111)
+		{
+			LCD_LED_CLR;
+		
+		}
+		
+		else if(led111)
+		{
+		if(light)
+		{
+			LCD_LIGHT(400);
+		}
+		else
+		{
+			LCD_LIGHT(150);
+		}
+	}
+	  }
+	  //music1();
 	  //W25Q64_Erase(4096,4096);
 	  //W25Q64_Test();
 	  /*播放音乐，调节声音*/

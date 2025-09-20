@@ -557,6 +557,11 @@ void game1_draw(struct Character_coordinates *cdata, Character_actcoordinates *p
 	
 	while(1)
 	{
+		extern void LCD_LIGHT(uint16_t num);
+
+		
+		
+		
 		/*用于接收坐标变化量数据*/
 		xQueueReceive(*g_xQueueCharacter,cdata,0);
 		/*时间计算*/
@@ -715,6 +720,8 @@ void game1_draw(struct Character_coordinates *cdata, Character_actcoordinates *p
 
 void game1_task(void *params)
 {
+
+	
 	TaskHandle_t INPUTTaskHandle = NULL;
 	
 	/* 创建队列,队列集,创建输入任务InputTask */

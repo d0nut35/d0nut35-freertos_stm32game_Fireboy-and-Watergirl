@@ -182,7 +182,7 @@ void RotaryEncoder_Init(void)
 {
     /* PB0,PB1在MX_GPIO_Init中被配置为输入引脚 */
     /* PB12在MX_GPIO_Init中被配置为中断引脚,上升沿触发 */
-	g_xQueueRotary   = xQueueCreateStatic(ROTARY_QUEUE_LEN, sizeof(struct rotary_data), g_ucQueueRotaryBuf, &g_xQueueRotaryStaticStruct);
+	//g_xQueueRotary   = xQueueCreateStatic(ROTARY_QUEUE_LEN, sizeof(struct rotary_data), g_ucQueueRotaryBuf, &g_xQueueRotaryStaticStruct);
 }
 
 /**********************************************************************
